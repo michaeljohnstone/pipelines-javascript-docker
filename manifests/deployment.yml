@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: michaeljohnstonepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: michaeljohnstonepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: michaeljohnstonepipelinesjavascriptdocker 
+          image: kastaacr.azurecr.io/michaeljohnstonepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
